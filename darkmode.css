@@ -1,2 +1,9 @@
 :root {
+  --primary-color: #415241;
+  --secondary-color: #637c67;
+  --third-color: rgba(192, 192, 192, 0.842);
+}
+
+.card {
+  box-shadow: 5px 10px 10px rgba(66, 66, 66, 0.692);
 }

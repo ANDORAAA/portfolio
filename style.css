@@ -1,7 +1,7 @@
 :root {
-  --primary-color: #95ad99;
-  --secondary-color: #678167;
-  --third-color: #faf1f1;
+  --primary-color: #678167;
+  --secondary-color: #faf1f1;
+  --third-color: rgba(233, 232, 232, 0.842);
 }
 
 * {
@@ -11,7 +11,7 @@
 }
 
 body {
-  background-color: var(--third-color);
+  background-color: var(--secondary-color);
 }
 
 .container {
@@ -28,7 +28,7 @@ body {
 
 .navbar {
   background-color: var(--primary-color);
-  color: var(--third-color);
+  color: var(--secondary-color);
 
   & .flex {
     display: flex;
@@ -56,7 +56,7 @@ body {
   transition: 0.4s;
 }
 .slider:before {
-  background-color: #fff;
+  background-color: var(--primary-color);
   bottom: 1px;
   left: 1px;
   content: "";
@@ -86,10 +86,10 @@ body {
 .contact {
   background-color: var(--primary-color);
   padding: 30px 0 30px 0;
-  color: var(--third-color);
+  color: var(--secondary-color);
 
   & .contact-text p {
-    color: var(--third-color);
+    color: var(--secondary-color);
   }
 }
 
@@ -98,7 +98,7 @@ body {
   top: 60px;
 
   & h2 {
-    color: var(--secondary-color);
+    color: var(--primary-color);
   }
 
   animation: slideFromRight 1s ease-in;
@@ -127,7 +127,7 @@ body {
 }
 
 .card {
-  background-color: rgba(233, 232, 232, 0.842);
+  background-color: var(--third-color);
   box-shadow: 5px 10px 10px rgba(114, 114, 114, 0.692);
   border-radius: 10px;
   padding: 20px;
@@ -137,10 +137,10 @@ body {
 .contact-form input[type="text"] {
   width: 100%;
   padding: 4px;
-  border: 1px solid var(--secondary-color);
+  border: 1px solid var(--primary-color);
   background-color: transparent;
   &::placeholder {
-    color: var(--secondary-color);
+    color: var(--primary-color);
   }
 
   &:focus {
@@ -154,9 +154,9 @@ body {
 
 .btn-primary {
   padding: 4px;
-  border: 1px solid var(--secondary-color);
+  border: 1px solid var(--primary-color);
   border-radius: 2px;
-  color: var(--secondary-color);
+  color: var(--primary-color);
   font-weight: 600;
   background-color: transparent;
   cursor: pointer;
@@ -164,7 +164,7 @@ body {
 
 .technologies {
   position: relative;
-  color: var(--secondary-color);
+  color: var(--primary-color);
   text-align: center;
   padding: 50px;
 
@@ -198,20 +198,25 @@ body {
     max-width: 400px;
     max-height: 200px;
   }
-  & a {
+
+  & h2 {
     color: var(--secondary-color);
+  }
+
+  & a {
+    color: var(--primary-color);
     text-decoration: none;
   }
 }
 
 .footer {
-  background-color: var(--third-color);
-  color: var(--secondary-color);
+  background-color: var(--secondary-color);
+  color: var(--primary-color);
   padding: 10px 0;
 
   & a {
     text-decoration: none;
-    color: var(--secondary-color);
+    color: var(--primary-color);
   }
 
   & .socials {
@@ -254,6 +259,11 @@ body {
 
   .container {
     padding: 0;
+  }
+
+  .technologies .card svg {
+    max-height: 100px;
+    max-width: 100px;
   }
 
   .footer .grid {
